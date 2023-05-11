@@ -2,11 +2,70 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js"></script>
     <title>Document</title>
   </head>
   <body>
-    cscs
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span id="close" onclick="closeModal()" class="close">&times;</span>
+        <p id="quote">Citation</p>
+        <span id="author">Auteur</p>
+      </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <h1>Menu</h1>
+    </div>
+  <div id="main">
+    <div class="burger-icon" onclick="openNav()">
+      <div class="burger"></div>
+      <div class="burger"></div>
+      <div class="burger"></div>
+    </div>
+    <div class="main df col">
+      <div class="exo">
+          <h3>Générateur de mot de passe</h3>
+          <div class="df">
+            <input type="text" id="password" />
+            <button onclick="generatePassword()">Generate a password</button>
+          </div>
+      </div>
+      <div class="exo">
+          <h3>Convertisseur Celsius en Fahrenheit</h3>
+          <div class="df aic">
+              <div class="df col">
+                <span>Celsius</span>
+                <input type="text" id="converter-celsius" />
+                <span>Fahrenheit</span>
+                <input type="text" id="converter-fahrenheit" />
+                <div class="mt">
+                  <button onclick="celsiusToFahrenHeit('fahrenheit')">
+                      Convert to Fahrenheit
+                    </button>
+                  <button onclick="celsiusToFahrenHeit('celsius')">
+                    Convert to Celsius
+                  </button>
+                </div>
+              </div>
+            </div>
+      </div>
+  <div class="exo">
+      <h3>Générateur de citations</h3>
+      <div class="df">
+        <button onclick="openModal()">Générer une citation</button>
+      </div>
+  </div>
+   <div class="exo">
+      <h3 id="darkModeTitle">Eteindre la lumière ?</h3>
+    <div class="df">
+      <button id="darkModeBtn" onclick="setDarkMode()">Activer le mode sombre</button>
+    </div>
+   </div>
+  </div>
+  </div>
   </body>
 </html>
